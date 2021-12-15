@@ -12,17 +12,34 @@ struct Line {
     //MARK: - PROPERTIES
     var points = [CGPoint]()
     var color: Color = .red
-    var lineWidth:Double = 1.0
+    var lineWidth:Double = 3.0
 }
 struct ContentView: View {
+    
+    @State private var currentLine = Line()
+    @State private var lines:[Line] = []
     
     //MARK: - BODY
     var body: some View {
         VStack {
             if #available(macOS 12.0, *) {
                 Canvas { context, size in
-                    
-                }.gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local))
+                    for line in lines {
+                        var path = Path()
+                        path.addLines(line.points)
+                        context.stroke(path, with: .color(line.color), lineWidth: line.lineWidth)
+                    }
+                }.gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                    .onChanged ({ value in
+                        let newPoint = value.location
+                    currentLine.points.append(newPoint)
+                    lines.append(currentLine)
+                    })
+                    .onEnded({ value in
+                   //  self.lines.append(currentLine)
+                    self.currentLine = Line(points: [])
+                    })
+                )
             } else {
                 // Fallback on earlier versions
             }
