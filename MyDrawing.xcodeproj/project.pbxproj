@@ -19,6 +19,8 @@
 		72907C4D2768EB5100AB361D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72907C222768EB5100AB361D /* Assets.xcassets */; };
 		72AAFC41276A121600DB6C6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AAFC40276A121600DB6C6B /* Constants.swift */; };
 		72AAFC42276A121600DB6C6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AAFC40276A121600DB6C6B /* Constants.swift */; };
+		72AAFC44276A144B00DB6C6B /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AAFC43276A144B00DB6C6B /* ColorPickerView.swift */; };
+		72AAFC45276A144B00DB6C6B /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AAFC43276A144B00DB6C6B /* ColorPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		72907C442768EB5100AB361D /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		72907C462768EB5100AB361D /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		72AAFC40276A121600DB6C6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = SOURCE_ROOT; };
+		72AAFC43276A144B00DB6C6B /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 				72907C212768EB5000AB361D /* ContentView.swift */,
 				72907C222768EB5100AB361D /* Assets.xcassets */,
 				72AAFC40276A121600DB6C6B /* Constants.swift */,
+				72AAFC43276A144B00DB6C6B /* ColorPickerView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AAFC44276A144B00DB6C6B /* ColorPickerView.swift in Sources */,
 				72907C4A2768EB5100AB361D /* ContentView.swift in Sources */,
 				72907C482768EB5100AB361D /* MyDrawingApp.swift in Sources */,
 				72AAFC41276A121600DB6C6B /* Constants.swift in Sources */,
@@ -313,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AAFC45276A144B00DB6C6B /* ColorPickerView.swift in Sources */,
 				72907C4B2768EB5100AB361D /* ContentView.swift in Sources */,
 				72907C492768EB5100AB361D /* MyDrawingApp.swift in Sources */,
 				72AAFC42276A121600DB6C6B /* Constants.swift in Sources */,
