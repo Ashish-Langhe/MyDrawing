@@ -7,10 +7,26 @@
 
 import SwiftUI
 
+struct Line {
+    
+    //MARK: - PROPERTIES
+    var points = [CGPoint]()
+    var color: Color = .red
+    var lineWidth:Double = 1.0
+}
 struct ContentView: View {
+    
+    //MARK: - BODY
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            if #available(macOS 12.0, *) {
+                Canvas { context, size in
+                    
+                }.gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local))
+            } else {
+                // Fallback on earlier versions
+            }
+        }.frame(minWidth: 400, minHeight: 400)
     }
 }
 
