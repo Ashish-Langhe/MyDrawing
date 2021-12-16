@@ -45,6 +45,9 @@ struct ContentView: View {
             }
             Spacer()
             ColorPickerView(selectedColor: $selectedColor)
+                .onChange(of: selectedColor) { newColor in
+                    currentLine.color = newColor
+                }
         }.frame(minWidth: 400, minHeight: 400)
     }
 }
