@@ -18,7 +18,7 @@ struct ContentView: View {
     
     @State private var currentLine = Line()
     @State private var lines:[Line] = []
-    
+    @State private var selectedColor:Color = .red
     //MARK: - BODY
     var body: some View {
         VStack {
@@ -43,6 +43,8 @@ struct ContentView: View {
             } else {
                 // Fallback on earlier versions
             }
+            Spacer()
+            ColorPickerView(selectedColor: $selectedColor)
         }.frame(minWidth: 400, minHeight: 400)
     }
 }

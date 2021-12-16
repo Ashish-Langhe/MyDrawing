@@ -26,6 +26,7 @@ struct ColorPickerView: View {
                     }
             }
         }
+        .padding()
     }
 }
 
